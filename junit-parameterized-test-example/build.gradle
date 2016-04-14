@@ -1,0 +1,25 @@
+group 'com.taccardi.zak'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    jcenter()
+    mavenCentral()
+}
+
+dependencies {
+
+    //testing
+    def junitVersion = '4.12'
+    def mockitoVersion = '1.10.19'
+    def hamcrestJunitVersion = '2.0.0.0'
+
+    // Mockito Dependencies
+    testCompile "org.hamcrest:hamcrest-junit:$hamcrestJunitVersion"
+    testCompile "junit:junit:$junitVersion"
+    testCompile "org.mockito:mockito-core:$mockitoVersion"
+
+}
